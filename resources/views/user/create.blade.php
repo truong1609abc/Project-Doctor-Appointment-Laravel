@@ -86,7 +86,7 @@
                with font-awesome or any other icon font library -->
             <li class="nav-item">
                 <a href="#" class="nav-link">
-                <i class="fas fa-user-nurse"></i> 
+                <i class="nav-icon fas fa-tachometer-alt"></i>
                 <p>
                     Doctor
                     <i class="right fas fa-angle-left"></i>
@@ -102,7 +102,7 @@
                 <li class="nav-item">
                     <a href="./index2.html" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
-                    <p>doctor management</p>
+                    <p>Doctor management</p>
                     </a>
                 </li>
                 </ul>
@@ -112,7 +112,7 @@
             <a href="#" class="nav-link ">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
-                statistical
+                Statistical
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>
@@ -130,7 +130,7 @@
             <a href="#" class="nav-link ">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
-                appointment management
+                Appointment management
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>
@@ -168,12 +168,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Admin</h1>
+            <h1 class="m-0">Doctor</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Admin</li>
+              <li class="breadcrumb-item active">Doctor</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -190,7 +190,7 @@
                 <!-- general form elements -->
             <div class="card card-primary">
               <div class="card-header">
-                <h3 class="card-title">Thêm mới admin</h3>
+                <h3 class="card-title">Thêm mới doctor</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
