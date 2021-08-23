@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1505,3 +1506,6 @@
 </body>
 </html>
 
+=======
+<h1 style="text-align: center;">Ban Ga vcl</h1
+>>>>>>> Stashed changes
