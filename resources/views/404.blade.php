@@ -9,7 +9,7 @@
 </head>
 <body style="background-image:url({{url('images/17876.jpg')}});" >
     <div class="supper-man">
-        <img src="{{ asset('images/pngwing.com.png') }}" alt="">
+        <img src="{{asset('images/pngwing.com.png') }}" alt="">
       </div>
       
       <div class="title">404!</div>
