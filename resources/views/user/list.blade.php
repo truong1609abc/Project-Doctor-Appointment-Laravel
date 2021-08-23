@@ -94,13 +94,13 @@
                 </a>
                 <ul class="nav nav-treeview">
                 <li class="nav-item">
-                    <a href="./index.html" class="nav-link ">
+                    <a href="/user/create" class="nav-link ">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Add doctor</p>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="./index2.html" class="nav-link">
+                    <a href="/user/list" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Doctor management</p>
                     </a>
