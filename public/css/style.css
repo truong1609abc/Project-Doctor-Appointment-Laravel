@@ -16,12 +16,13 @@ body{
   
   
   .supper-man img{
-    width:250px;
+    width: 250px;
     position:absolute;
     margin-top: 10%;
     animation:animationSupperman 6s infinite linear;
     
   }
+  
   .title{
     color:#Fff;
     font-size:130px;
