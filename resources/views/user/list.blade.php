@@ -186,7 +186,7 @@
       <div class="container-fluid">
         <!-- Small boxes (Stat box) -->
         <div class="row">   
-        <div class="col-lg-9 col-12">
+        <div class="col-lg-12 col-12">
             <div class="card">
               <div class="card-header">
                 <h3 class="card-title">Responsive Hover Table</h3>
