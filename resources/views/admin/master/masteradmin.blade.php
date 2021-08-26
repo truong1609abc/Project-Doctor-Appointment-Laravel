@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>AdminLTE 3 | Dashboard</title>
   <base href="{{asset('')}}assets/">
+  @section('css')
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
@@ -25,10 +26,13 @@
   <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
   <!-- summernote -->
   <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css">
+  @show
+
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
-
+    @section('header')
+        <header>
   <!-- Preloader -->
   <div class="preloader flex-column justify-content-center align-items-center">
     <img class="animation__shake" src="dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
@@ -162,6 +166,10 @@
   </aside>
 
   <!-- Content Wrapper. Contains page content -->
+</header>
+@show
+<div class="container-fluid">
+         <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <div class="content-header">
@@ -179,89 +187,11 @@
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
     </div>
-    <!-- /.content-header -->
+    
+        @yield('content')
+    </div>
 
-    <!-- Main content -->
-    <section class="content">
-      <div class="container-fluid">
-        <!-- Small boxes (Stat box) -->
-        <div class="row">   
-        <div class="col-lg-12 col-12">
-            <div class="card">
-              <div class="card-header">
-                <h3 class="card-title">Responsive Hover Table</h3>
-
-                <div class="card-tools">
-                  <div class="input-group input-group-sm" style="width: 150px;">
-                    <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
-
-                    <div class="input-group-append">
-                      <button type="submit" class="btn btn-default">
-                        <i class="fas fa-search"></i>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- /.card-header -->
-              <div class="card-body table-responsive p-0">
-                <table class="table table-hover text-nowrap">
-                  <thead>
-                    <tr>
-                      <th>ID</th>
-                      <th>User</th>
-                      <th>Date</th>
-                      <th>Status</th>
-                      <th>Reason</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>183</td>
-                      <td>John Doe</td>
-                      <td>11-7-2014</td>
-                      <td><span class="tag tag-success">Approved</span></td>
-                      <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-                    </tr>
-                    <tr>
-                      <td>219</td>
-                      <td>Alexander Pierce</td>
-                      <td>11-7-2014</td>
-                      <td><span class="tag tag-warning">Pending</span></td>
-                      <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-                    </tr>
-                    <tr>
-                      <td>657</td>
-                      <td>Bob Doe</td>
-                      <td>11-7-2014</td>
-                      <td><span class="tag tag-primary">Approved</span></td>
-                      <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-                    </tr>
-                    <tr>
-                      <td>175</td>
-                      <td>Mike Doe</td>
-                      <td>11-7-2014</td>
-                      <td><span class="tag tag-danger">Denied</span></td>
-                      <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <!-- /.card-body -->
-            </div>
-            <!-- /.card -->
-          </div>
-
-          <!-- <div class="col-lg-3 col-12"> 
-                Ảnh
-          </div> -->
-        </div>
-        <!-- /.row -->
-      </div><!-- /.container-fluid -->
-    </section>
-    <!-- /.content -->
-  </div>
-  <!-- /.content-wrapper -->
+  @section('footer')
   <footer class="main-footer">
     <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong>
     All rights reserved.
@@ -269,15 +199,14 @@
       <b>Version</b> 3.1.0
     </div>
   </footer>
+  @show
 
   <!-- Control Sidebar -->
-  <aside class="control-sidebar control-sidebar-dark">
-    <!-- Control sidebar content goes here -->
-  </aside>
+  
   <!-- /.control-sidebar -->
 </div>
 <!-- ./wrapper -->
-
+@section('scripts')
 <!-- jQuery -->
 <script src="plugins/jquery/jquery.min.js"></script>
 <!-- jQuery UI 1.11.4 -->
@@ -312,6 +241,7 @@
 <script src="dist/js/demo.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="dist/js/pages/dashboard.js"></script>
+@show
+
 </body>
 </html>
-

@@ -17,13 +17,16 @@ Route::get('/1', function () {
 });
 
 Route::get('user/create', function (){
-    return view('user.create');
+    return view('admin.user.create');
 });
 
 Route::get('user/list', function (){
-    return view('user.list');
+    return view('admin.user.list');
 });
 
 Route::get('/2', function () {
     return view('404');
+});
+Route::get('/3', function () {
+    return view('admin.master.masteradmin');
 });
