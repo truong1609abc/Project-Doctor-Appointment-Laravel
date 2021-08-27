@@ -14,48 +14,33 @@
                   <thead>
                     <tr>
                       <th>ID</th>
-                      <th>User</th>
-                      <th>Date</th>
-                      <th>Status</th>
-                      <th>Reason</th>
-                      <th colspan="2">Active</th>
+                      <th>Tên</th>
+                      <th>Ngày sinh</th>
+                      <th>Email</th>
+                      <th>Trạng thái</th>
+                      <th>Địa chỉ</th>
+                      <th>Số điện thoại</th>
+                      <th >Active</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <td>183</td>
+                      <td>11</td>
                       <td>John Doe</td>
                       <td>11-7-2014</td>
-                      <td><span class="tag tag-success">Approved</span></td>
-                      <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
+                      <td>abc@gmail.com</td>
+                      <td>Nam</td>
+                      <td>Hà Nội</td>
+                      <td>012345678</td>
+                      
                       <td>
-                      <button type="button" class="btn btn-block btn-outline-primary"><a href="">Sửa</a></button>
+                      <a style="float: left;" href=""><i class="fas fa-cog"></i></a>
+                      
+                      <a style="float: right;" href=""><i class="fas fa-trash"></i></a>
                       </td>
-                      <td>
-                      <button type="button" class="btn btn-block btn-outline-danger"><a href="">Xóa</a></button>
-                      </td>
+                      
                     </tr>
-                    <tr>
-                      <td>219</td>
-                      <td>Alexander Pierce</td>
-                      <td>11-7-2014</td>
-                      <td><span class="tag tag-warning">Pending</span></td>
-                      <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-                    </tr>
-                    <tr>
-                      <td>657</td>
-                      <td>Bob Doe</td>
-                      <td>11-7-2014</td>
-                      <td><span class="tag tag-primary">Approved</span></td>
-                      <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-                    </tr>
-                    <tr>
-                      <td>175</td>
-                      <td>Mike Doe</td>
-                      <td>11-7-2014</td>
-                      <td><span class="tag tag-danger">Denied</span></td>
-                      <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-                    </tr>
+                    
                   </tbody>
                 </table>
               </div>

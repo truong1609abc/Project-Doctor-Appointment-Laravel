@@ -16,11 +16,11 @@ Route::get('/1', function () {
     return view('login');
 });
 
-Route::get('user/create', function (){
+Route::get('assets/user/create', function (){
     return view('admin.user.create');
 });
 
-Route::get('user/list', function (){
+Route::get('assets/user/list', function (){
     return view('admin.user.list');
 });
 

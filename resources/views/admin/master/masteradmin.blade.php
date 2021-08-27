@@ -98,15 +98,15 @@
                 </a>
                 <ul class="nav nav-treeview">
                 <li class="nav-item">
-                    <a href="/user/create" class="nav-link ">
+                    <a href="user/create" class="nav-link ">
                     <i class="far fa-circle nav-icon"></i>
-                    <p>Add doctor</p>
+                    <p>Thêm bác sĩ</p>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="/user/list" class="nav-link">
+                    <a href="user/list" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
-                    <p>Doctor management</p>
+                    <p>Quản lí bác sĩ</p>
                     </a>
                 </li>
                 </ul>
@@ -116,7 +116,7 @@
             <a href="#" class="nav-link ">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
-                Statistical
+                Thống kê
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>
@@ -134,7 +134,7 @@
             <a href="#" class="nav-link ">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
-                Appointment management
+                Quản lí cuộc hẹn
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>
