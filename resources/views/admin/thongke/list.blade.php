@@ -9,17 +9,18 @@
 @endsection
 
 @section('content')
+        
 
-<div class="row">
           <div class="col-lg-3 col-6">
             <!-- small box -->
             <div class="small-box bg-info">
               <div class="inner">
-                <h3>
+                @foreach($dem1 as $item)
+                <h3>{{$item->dem}}</h3>
+                @endforeach
                 
-                </h3>
 
-                <p>New Orders</p>
+                <p>Cuộc hẹn</p>
               </div>
               <div class="icon">
                 <i class="ion ion-bag"></i>
@@ -27,4 +28,7 @@
               <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
-          @endsection
+
+
+
+@endsection
