@@ -26,7 +26,7 @@
                             {{$item->name}}                     
                         </td>
                         <td>
-                        <a  href="{{url('/editChuyenmon/'.$item->id_chuyenmon)}}"><i class="fas fa-cog"></i></a>
+                        <a href="{{url('/editChuyenmon/'.$item->id_chuyenmon)}}"><i class="fas fa-cog"></i></a>
                           
                           
                         </td>

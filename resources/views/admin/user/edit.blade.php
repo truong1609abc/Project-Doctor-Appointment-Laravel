@@ -12,11 +12,11 @@
 <div class="container-fluid">
         <!-- Small boxes (Stat box) -->
         <div class="row">
-          <div class="col-lg-9 col-12">
+          <div class="col-lg-12 col-12">
                 <!-- general form elements -->
             <div class="card card-primary">
               <div class="card-header">
-                <h3 class="card-title">cap nhat doctor</h3>
+                <h3 class="card-title">Cập nhật doctor</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
@@ -48,9 +48,9 @@
 
                   <div class="input-group mb-3">
                     <label class="input-group-text" id="basic-addon3">Ảnh</label>
-                    <img style="width: 200px;cursor:zoom-in;" src="{{$doctor->image}}" >
+                    <img style="width: 200px;cursor:zoom-in;" src="../{{$doctor->image}}" >
                     <input name="image" type="file" accept="image/*" class="form-control" placeholder="Ho ten" aria-describedby="basic-addon3">
-                    <!-- <input type="text" name="hidden_image" value="{{$doctor->image}}"> -->
+                    {{-- <!-- <input type="text" name="hidden_image" value="{{$doctor->image}}"> --> --}}
                   
                   </div>
 

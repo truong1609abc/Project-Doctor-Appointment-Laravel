@@ -12,11 +12,11 @@
 <div class="container-fluid">
         <!-- Small boxes (Stat box) -->
         <div class="row">
-          <div class="col-lg-9 col-12">
+          <div class="col-lg-12 col-12">
                 <!-- general form elements -->
             <div class="card card-primary">
               <div class="card-header">
-                <h3 class="card-title">Thêm mới doctor</h3>
+                <h3 class="card-title">Thêm mới chuyên môn</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
@@ -27,11 +27,21 @@
 
                 <div class="form-group">
                     <label for="exampleInputEmail1">ID</label>
-                    <input type="number" class="form-control" name="id_chuyenmon" id="id_chuyenmon" placeholder="Nhập ID">
+                    <input type="number" class="form-control @error('id_chuyenmon') is-invalid @enderror" name="id_chuyenmon" id="id_chuyenmon" placeholder="Nhập ID">
+                    @error('id_chuyenmon')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                    @enderror
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Chuyên môn</label>
-                    <input type="text" class="form-control" name="name" id="name" placeholder="Nhập bằng cấp">
+                    <input type="text" class="form-control @error('name') is-invalid @enderror" name="name" id="name" placeholder="Nhập bằng cấp">
+                    @error('name')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                    @enderror
                   </div>
 
                   

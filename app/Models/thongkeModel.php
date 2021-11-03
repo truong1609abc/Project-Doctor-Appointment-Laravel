@@ -11,6 +11,19 @@ class thongkeModel extends Model
     use HasFactory;
 
    static function thongke(){
-    return DB::select("SELECT COUNT(*)as dem FROM appointment");
+    return DB::select("SELECT count(*) as dem FROM appointment WHERE MONTH(date)=MONTH(NOW())");
    }
+
+   static function thongke1(){
+    return DB::select("SELECT count(*) as dem FROM appointment WHERE DAY(date)=DAY(NOW())");
+   }
+
+   static function thongke2(){
+    return DB::select("SELECT count(*) as dem FROM appointment WHERE YEAR(date)=YEAR(NOW())");
+   }
+
+   public $table = "appointment";
+    static function index(){
+        return DB::select("SELECT * FROM appointment");
+    }
 }

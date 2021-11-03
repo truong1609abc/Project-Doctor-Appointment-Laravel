@@ -2,8 +2,10 @@
 
 use App\Http\Controllers\DoctorController;
 use App\Http\Controllers\feedbackController;
+use App\Http\Controllers\HighchartController;
 use App\Http\Controllers\MyController;
 use App\Http\Controllers\thongkeController;
+use App\Http\Controllers\ValidateController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -101,5 +103,10 @@ Route::post('/edit1/{id_phanhoi}',[feedbackController::class,'updateFeedback']);
 Route::get('/edit2/{id_phanhoi}',[feedbackController::class,'getFeedback2']);
 
 Route::post('/edit2/{id_phanhoi}',[feedbackController::class,'updateFeedback2']);
-    //thống kê
+
+//thống kê
 Route::get('assets/thongke/list',[thongkeController::class,'thongke']);
+    //chart
+// Route::get('assets/thongke/list', [thongkeController::class, 'index']);
+//Validate
+// Route::post('assets/user/create', [ValidateController::class, 'UserForm']);

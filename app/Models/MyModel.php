@@ -47,8 +47,33 @@ class MyModel extends Model
         return $doctors;
     }
 
-    static function updateDoctor($id_doctor,$name_doctor,$doctor_email,$doctor_date,$image_name,$gender,$address,$phone,$star,$doctor_degree,$doctor_export,$id_chuyenmon){
-        return DB::update("UPDATE `doctor` SET `name_doctor`='$name_doctor',`doctor_email`='$doctor_email',`doctor_date`='$doctor_date',`image`='$image_name',`gender`='$gender',`address`='$address',`phone`='$phone',`star`='$star',`doctor_degree`='$doctor_degree',`doctor_export`='$doctor_export',`id_chuyenmon`='$id_chuyenmon' WHERE id_doctor='$id_doctor'");
+    static function updateDoctor($id_doctor,$name_doctor,$doctor_email,$doctor_date,$path,$gender,$address,$phone,$star,$doctor_degree,$doctor_export,$id_chuyenmon){
+        $doctor = DB::table('doctor')->where('id_doctor',$id_doctor)->first();
+        //dd($path);
+        $pathStore="";
+        if($path=='x' ) {
+            $pathStore = $doctor->image;
+        }else{
+            $pathStore = $path;
+        }
+        $data = [
+            'name_doctor'=>$name_doctor,
+            'doctor_email'=>$doctor_email,
+            'doctor_date'=>$doctor_date,
+            'image'=>$pathStore,
+            'gender'=>$gender,
+            'address'=>$address,
+            'address'=>$address,
+            'phone'=>$phone,
+            'star'=>$star,
+            'doctor_degree'=>$doctor_degree,
+            'doctor_export'=>$doctor_export,
+            'id_chuyenmon'=>$id_chuyenmon,
+        ];
+        // dd($data);
+        return DB::table('doctor')->where('id_doctor',$id_doctor)->update($data);
+        //dd($pathStore);
+        // return DB::update("UPDATE `doctor` SET `name_doctor`='$name_doctor',`doctor_email`='$doctor_email',`doctor_date`='$doctor_date',`image`='$pathStore',`gender`='$gender',`address`='$address',`phone`='$phone',`star`='$star',`doctor_degree`='$doctor_degree',`doctor_export`='$doctor_export',`id_chuyenmon`='$id_chuyenmon' WHERE id_doctor='$id_doctor'");
     }
 
     //update chuyên môn

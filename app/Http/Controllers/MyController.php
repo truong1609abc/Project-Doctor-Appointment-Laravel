@@ -13,6 +13,21 @@ class MyController extends Controller
     }
 
     function insertProcess(Request $request){
+        $request->validate([
+            'name_doctor' => 'required',
+            'doctor_email' => 'required|email',
+            'doctor_date' => 'required',
+            'gender' => 'required',
+            'address' => 'required',
+            'phone' => 'required|regex:/^([0-9\s\-\+\(\)]*)$/|min:10',
+            'star'=>'required',           
+            'doctor_degree' => 'required',
+            'doctor_export' => 'required',
+            'id_chuyenmon' => 'required'
+         ]);
+         
+
+
         $id_doctor = $request->input('id_doctor');
         $name_doctor = $request->input('name_doctor');
         $doctor_email = $request->input('doctor_email');
@@ -33,7 +48,7 @@ class MyController extends Controller
         $doctor_export = $request->input('doctor_export');
         $id_chuyenmon = $request ->input('id_chuyenmon');
         
-
+        
        
 
         $rs = MyModel::insertProcess($id_doctor,$name_doctor,$doctor_email,$password,$doctor_date,$path,$gender,$address,$phone,$star,$doctor_degree,$doctor_export,$id_chuyenmon);
@@ -42,8 +57,9 @@ class MyController extends Controller
             return redirect('assets/user/list');
         }
         else{
-            return "Insert that bai";
+            return redirect()->back()->withInput($request->all());
         }
+        
     }
 
     function deleteDoctor($id_doctor){
@@ -69,6 +85,11 @@ class MyController extends Controller
     }
 
     function insertProcess1(Request $request){
+        $request->validate([
+            'id_chuyenmon' => 'required',
+            'name' => 'required',           
+         ]);
+
         $id_chuyenmon = $request->input('id_chuyenmon');
         $name = $request->input('name');
 
@@ -88,9 +109,10 @@ class MyController extends Controller
 
     function updateDoctor(Request $request,$id_doctor){
         
+
+
         $name_doctor = $request->input('name_doctor');
-        $doctor_email = $request->input('doctor_email');
-        
+        $doctor_email = $request->input('doctor_email');      
         $doctor_date = $request ->input('doctor_date');
         $gender = $request ->input('gender');
         $address = $request->input('address');
@@ -100,19 +122,31 @@ class MyController extends Controller
         $doctor_export = $request->input('doctor_export');
         $id_chuyenmon = $request ->input('id_chuyenmon');
 
+        
+        
+        // $image_name = $request->hidden_image;
+        // $image = $request->file('image');
+        //  if($image != '')
+        //  {
+        //      $image_name = rand().'.'.$image->getClientOriginalExtension();
+        //      $image->move(public_path('images'));
+        //  }
+        $file = $request->file('image');    
+        $path = "";
+        if($file != null) {
+            $fileName = time().".".$request->file('image')->extension();
 
-        $image_name = $request->hidden_image;
-        $image = $request->file('image');
-         if($image != '')
-         {
-             $image_name = rand().'.'.$image->getClientOriginalExtension();
-             $image->move(public_path('images'));
-         }
+            $request->file('image')->storeAs('public',$fileName);
 
+            $path = 'storage/'.$fileName;
+        }else{
+            $path = 'x';
+        }
+ 
        
 
-        $rs = MyModel::updateDoctor($id_doctor,$name_doctor,$doctor_email,$doctor_date,$image_name,$gender,$address,$phone,$star,$doctor_degree,$doctor_export,$id_chuyenmon);
-
+        $rs = MyModel::updateDoctor($id_doctor,$name_doctor,$doctor_email,$doctor_date,$path,$gender,$address,$phone,$star,$doctor_degree,$doctor_export,$id_chuyenmon);
+        //dd($rs);
         if($rs == true){
             return redirect('assets/user/list');
         }
