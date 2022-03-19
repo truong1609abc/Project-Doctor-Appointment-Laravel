@@ -1,4 +1,4 @@
-@extends('admin.master.masteradmin')
+@extends('admin.master.masterDoctor')
 
 @section('css')
   @parent
@@ -14,41 +14,53 @@
                   <thead>
                     <tr>
                       <th>ID</th>
-                      <th>Tên</th>
-                      <th>Ngày sinh</th>
-                      <th>Email</th>
-                      <th>Đánh giá</th>
-                      <th>Địa chỉ</th>
-                      <th>Số điện thoại</th>
-                      <th >Active</th>
+                      <th>ID Khách hàng</th>
+                      <th>ID Bác sĩ</th>
+                      <th>Ngày đặt</th>
+                      <th>Thời gian bắt đầu</th>
+                      <th>Thời gian kết thúc</th>
+                      <th>Ghi chú</th>
+                      <th >Trạng thái</th>
+                      <th>Action</th>
                     </tr>
                   </thead>
                   <tbody>
                   @forelse ($doctor as $item)
                     <tr>
-                        <td>{{$item->id_doctor}}</td>
+                        <td>{{$item->id}}</td>
                         <td>
-                            {{$item->name_doctor}}                     
+                            {{$item->name}}                     
                         </td>
                         <td>
-                            {{$item->doctor_date}}
+                            {{$item->name_doctor}}
                         </td>
                         <td>
-                            {{$item->doctor_email}}
+                            {{$item->date}}
                         </td>
                         <td>
-                            {{$item->star}}
+                            {{$item->time_start}}
                         </td>
                         <td>
-                            {{$item->address}}
+                            {{$item->time_end}}
                         </td>
                         <td>
-                            {{$item->phone}}
+                            {{$item->purpose}}
                         </td>
                         <td>
-                          <a style="float: left;" href="{{url('/edit/'.$item->id_doctor)}}"><i class="fas fa-cog"></i></a>
+                            {{$item->status}}
+                        </td>
+                        <td>
                           
-                          <a onclick="return confirm('Are you sure?')" style="float: right;" href="{{url('/delete/'.$item->id_doctor)}}"><i class="fas fa-trash"></i></a>
+                          @if($item->status=='completed')
+                          <p>Đã hoàn thành</p>
+                          @elseif($item->status=='canceled')
+                          <p>Đã hủy bỏ</p>
+                          @elseif($item->status=='pending')
+                          <p>Đang chờ phê duyệt</p>
+                          @else
+                          <a style="float: right;" href="{{url('/complete/'.$item->id)}}">completed</a>
+                          @endif
+
                         </td>
                         
                     </tr>
@@ -60,7 +72,8 @@
                     
                   </tbody>
                 </table>
-              </div>
+</div>
+
 @endsection
 
 @section('scripts')
@@ -82,7 +95,7 @@
   <script>
   $(function () {
     $("#table-doctor").DataTable({
-      "pageLength": 4,
+      "pageLength": 5,
       "responsive": true, "lengthChange": false, "autoWidth": false,
       "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
     }).buttons().container().appendTo('#table-doctor_wrapper .col-md-6:eq(0)');

@@ -1,4 +1,4 @@
-@extends('admin.master.masteradmin')
+@extends('admin.master.masterDoctor')
 
 @section('css')
   @parent
@@ -14,41 +14,42 @@
                   <thead>
                     <tr>
                       <th>ID</th>
-                      <th>Tên</th>
-                      <th>Ngày sinh</th>
-                      <th>Email</th>
-                      <th>Đánh giá</th>
-                      <th>Địa chỉ</th>
-                      <th>Số điện thoại</th>
-                      <th >Active</th>
+                      <th>Khách hàng</th>
+                      <th>Phản hồi</th>
+                      <th>Phone</th>
+                      <th>Phản hồi admin</th>
+                      <th>Vấn đề phản hồi</th>
+                      <th>Thời gian</th>
+                      <th>Action</th>
+                      
                     </tr>
                   </thead>
                   <tbody>
                   @forelse ($doctor as $item)
                     <tr>
-                        <td>{{$item->id_doctor}}</td>
                         <td>
-                            {{$item->name_doctor}}                     
+                            {{$item->id_phanhoi}}
                         </td>
                         <td>
-                            {{$item->doctor_date}}
+                            {{$item->name}}                     
                         </td>
                         <td>
-                            {{$item->doctor_email}}
+                            {{$item->phone}}                     
                         </td>
                         <td>
-                            {{$item->star}}
+                            {{$item->lydoviettay}}
                         </td>
                         <td>
-                            {{$item->address}}
+                            {{$item->phanhoiadmin}}
                         </td>
                         <td>
-                            {{$item->phone}}
+                            {{$item->to}} 
                         </td>
                         <td>
-                          <a style="float: left;" href="{{url('/edit/'.$item->id_doctor)}}"><i class="fas fa-cog"></i></a>
-                          
-                          <a onclick="return confirm('Are you sure?')" style="float: right;" href="{{url('/delete/'.$item->id_doctor)}}"><i class="fas fa-trash"></i></a>
+                            {{$item->created_at}}
+                        </td>
+                        <td>
+                            <a href="{{url('/edit1/'.$item->id_phanhoi)}}">Phản hồi</i></a>
                         </td>
                         
                     </tr>

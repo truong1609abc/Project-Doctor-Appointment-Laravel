@@ -92,21 +92,15 @@
                 <a href="#" class="nav-link">
                 <i class="nav-icon fas fa-tachometer-alt"></i>
                 <p>
-                    Doctor
+                    Cuộc hẹn
                     <i class="right fas fa-angle-left"></i>
                 </p>
                 </a>
                 <ul class="nav nav-treeview">
                 <li class="nav-item">
-                    <a href="user/create" class="nav-link ">
+                    <a href="list/list" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
-                    <p>Thêm bác sĩ</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="user/list" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Quản lí bác sĩ</p>
+                    <p>Quản lí cuộc hẹn</p>
                     </a>
                 </li>
                 </ul>
@@ -137,57 +131,22 @@
             </li>
 
             <li class="nav-item">
-            <a href="#" class="nav-link ">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
-              <p>
-                Thống kê
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="./index.html" class="nav-link ">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Dashboard v1</p>
+                <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-tachometer-alt"></i>
+                <p>
+                    Phản hồi
+                    <i class="right fas fa-angle-left"></i>
+                </p>
                 </a>
-              </li>
-            </ul>
-          </li>
-
-          <li class="nav-item">
-            <a href="#" class="nav-link ">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
-              <p>
-                Cuộc hẹn
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="cuochen/list" class="nav-link ">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Quản lí cuộc hẹn</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link ">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
-              <p>
-                Phản hồi
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="feedback/list" class="nav-link ">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Quản lí phản hồi</p>
-                </a>
-              </li>
-            </ul>
-          </li>
+                <ul class="nav nav-treeview">
+                <li class="nav-item">
+                    <a href="doctor/feedback/list" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Quản lí phản hồi</p>
+                    </a>
+                </li>
+                </ul>
+            </li>
 
           <li class="nav-item">
             <a href="#" class="nav-link ">

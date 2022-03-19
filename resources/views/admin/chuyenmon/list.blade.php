@@ -15,46 +15,26 @@
                     <tr>
                       <th>ID</th>
                       <th>Tên</th>
-                      <th>Ngày sinh</th>
-                      <th>Email</th>
-                      <th>Đánh giá</th>
-                      <th>Địa chỉ</th>
-                      <th>Số điện thoại</th>
                       <th >Active</th>
                     </tr>
                   </thead>
                   <tbody>
-                  @forelse ($doctor as $item)
+                  @forelse ($chuyenmon1 as $item)
                     <tr>
-                        <td>{{$item->id_doctor}}</td>
+                        <td>{{$item->id_chuyenmon}}</td>
                         <td>
-                            {{$item->name_doctor}}                     
+                            {{$item->name}}                     
                         </td>
                         <td>
-                            {{$item->doctor_date}}
-                        </td>
-                        <td>
-                            {{$item->doctor_email}}
-                        </td>
-                        <td>
-                            {{$item->star}}
-                        </td>
-                        <td>
-                            {{$item->address}}
-                        </td>
-                        <td>
-                            {{$item->phone}}
-                        </td>
-                        <td>
-                          <a style="float: left;" href="{{url('/edit/'.$item->id_doctor)}}"><i class="fas fa-cog"></i></a>
+                          <a style="float: center;" href="{{url('/edit/'.$item->id_chuyenmon)}}"><i class="fas fa-cog"></i></a>
                           
-                          <a onclick="return confirm('Are you sure?')" style="float: right;" href="{{url('/delete/'.$item->id_doctor)}}"><i class="fas fa-trash"></i></a>
+                          
                         </td>
                         
                     </tr>
                 @empty
             <tr>
-                <td colspan="8" style="text-align: center;">Danh sách rỗng</td>
+                <td colspan="3" style="text-align: center;">Danh sách rỗng</td>
             </tr>
         @endforelse
                     
@@ -82,7 +62,6 @@
   <script>
   $(function () {
     $("#table-doctor").DataTable({
-      "pageLength": 4,
       "responsive": true, "lengthChange": false, "autoWidth": false,
       "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
     }).buttons().container().appendTo('#table-doctor_wrapper .col-md-6:eq(0)');
