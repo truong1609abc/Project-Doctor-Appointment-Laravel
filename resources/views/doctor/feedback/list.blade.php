@@ -43,7 +43,11 @@
                             {{$item->phanhoiadmin}}
                         </td>
                         <td>
+<<<<<<< HEAD
                             {{$item->to}} 
+=======
+                            {{$item->toto}} 
+>>>>>>> 83e0c695002e1949d6ffc75ec94c0467db85e1fc
                         </td>
                         <td>
                             {{$item->created_at}}

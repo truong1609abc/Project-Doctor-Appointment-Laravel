@@ -43,13 +43,21 @@
                             {{$item->phanhoiadmin}}
                         </td>
                         <td>
+<<<<<<< HEAD
                             {{$item->to}} 
+=======
+                            {{$item->toto}} 
+>>>>>>> 83e0c695002e1949d6ffc75ec94c0467db85e1fc
                         </td>
                         <td>
                             {{$item->created_at}}
                         </td>
                         <td>
+<<<<<<< HEAD
                             <a href="{{url('/edit1/'.$item->id_phanhoi)}}">Phản hồi</i></a>
+=======
+                            <a href="{{url('/edit2/'.$item->id_phanhoi)}}">Phản hồi</i></a>
+>>>>>>> 83e0c695002e1949d6ffc75ec94c0467db85e1fc
                         </td>
                         
                         

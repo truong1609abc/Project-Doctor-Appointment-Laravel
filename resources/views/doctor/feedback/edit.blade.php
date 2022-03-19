@@ -32,6 +32,7 @@
                     <label for="exampleInputEmail1">Khách hàng</label>
                     <input value="{{$phanhoi->name}}" readonly type="text" class="form-control" name="name" id="name" placeholder="Nhập tên">
                   </div>
+<<<<<<< HEAD
 
                   <div class="form-group">
                     <label for="exampleInputEmail1">Phản hồi</label>
@@ -41,10 +42,28 @@
                   <div class="form-group">
                     <label for="exampleInputEmail1">Phone</label>                  
                     <input value="{{$phanhoi->lydoviettay}}" readonly type="int" class="form-control" name="lydoviettay" id="lydoviettay" placeholder="Nhập ngày sinh">
+=======
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Phone</label>                  
+                    <input value="{{$phanhoi->phone}}" readonly type="int" class="form-control" name="lydoviettay" id="lydoviettay" placeholder="Nhập ngày sinh">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Phản hồi</label>
+                    <input value="{{$phanhoi->lydoviettay}}" readonly type="text" class="form-control" name="phone" id="phone" placeholder="Nhập email">
+                  </div>                  
+
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Vấn đề phản hồi</label>
+                    
+                    <input value="{{$phanhoi->toto}}" readonly type="" class="form-control" name="toto" id="toto" placeholder="Nhập email">
+                    
+>>>>>>> 83e0c695002e1949d6ffc75ec94c0467db85e1fc
                   </div>
 
                   <div class="form-group">
                     <label for="exampleInputEmail1">Phản hồi admin</label>
+<<<<<<< HEAD
                     <input value="{{$phanhoi->phanhoiadmin}}" type="text" class="form-control" name="phanhoiadmin" id="phanhoiadmin" placeholder="Nhập phản hồi của admin">
                   </div>
 
@@ -52,6 +71,13 @@
                     <label for="exampleInputEmail1">Vấn đề phản hồi</label>
                     <input value="{{$phanhoi->to}}" readonly type="" class="form-control" name="to" id="to" placeholder="Nhập email">
                   </div>
+=======
+                    <textarea  value="{{$phanhoi->phanhoiadmin}}" type="text" class="form-control" name="phanhoiadmin" id="phanhoiadmin" rows="4" cols="50"></textarea>
+                    <!-- <input value="{{$phanhoi->phanhoiadmin}}" type="text" class="form-control" name="phanhoiadmin" id="phanhoiadmin" placeholder="Nhập phản hồi của admin"> -->
+                  </div>
+
+                  
+>>>>>>> 83e0c695002e1949d6ffc75ec94c0467db85e1fc
 
                   <div class="form-group">
                     <label for="exampleInputEmail1">Thời gian</label>

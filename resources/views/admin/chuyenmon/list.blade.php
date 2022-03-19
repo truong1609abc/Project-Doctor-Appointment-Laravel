@@ -14,7 +14,11 @@
                   <thead>
                     <tr>
                       <th>ID</th>
+<<<<<<< HEAD
                       <th>Tên</th>
+=======
+                      <th>Chuyên môn</th>
+>>>>>>> 83e0c695002e1949d6ffc75ec94c0467db85e1fc
                       <th >Active</th>
                     </tr>
                   </thead>
@@ -26,7 +30,11 @@
                             {{$item->name}}                     
                         </td>
                         <td>
+<<<<<<< HEAD
                           <a style="float: center;" href="{{url('/edit/'.$item->id_chuyenmon)}}"><i class="fas fa-cog"></i></a>
+=======
+                        <a href="{{url('/editChuyenmon/'.$item->id_chuyenmon)}}"><i class="fas fa-cog"></i></a>
+>>>>>>> 83e0c695002e1949d6ffc75ec94c0467db85e1fc
                           
                           
                         </td>

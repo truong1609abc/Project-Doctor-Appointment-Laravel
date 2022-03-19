@@ -34,6 +34,7 @@
                   </div>
 
                   <div class="form-group">
+<<<<<<< HEAD
                     <label for="exampleInputEmail1">Phản hồi</label>
                     <input value="{{$phanhoi->phone}}" readonly type="text" class="form-control" name="phone" id="phone" placeholder="Nhập email">
                   </div>                  
@@ -53,6 +54,31 @@
                     <input value="{{$phanhoi->to}}" readonly type="" class="form-control" name="to" id="to" placeholder="Nhập email">
                   </div>
 
+=======
+                    <label for="exampleInputEmail1">Phone</label>                  
+                    <input value="{{$phanhoi->phone}}" readonly type="int" class="form-control" name="lydoviettay" id="lydoviettay" placeholder="Nhập ngày sinh">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Phản hồi</label>
+                    <input value="{{$phanhoi->lydoviettay}}" readonly type="text" class="form-control" name="phone" id="phone" placeholder="Nhập email">
+                  </div>  
+                  
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Vấn đề phản hồi</label>
+                    <input value="{{$phanhoi->toto}}" readonly type="" class="form-control" name="to" id="to" placeholder="Nhập email">
+                  </div>
+
+                  
+
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Phản hồi admin</label>
+                    <textarea  value="{{$phanhoi->phanhoiadmin}}" type="text" class="form-control" name="phanhoiadmin" id="phanhoiadmin" rows="4" cols="50"></textarea>
+                  </div>
+
+                  
+
+>>>>>>> 83e0c695002e1949d6ffc75ec94c0467db85e1fc
                   <div class="form-group">
                     <label for="exampleInputEmail1">Thời gian</label>
                     <input value="{{$phanhoi->created_at}}" readonly type="timestamp" class="form-control" name="created_at" id="created_at" placeholder="Nhập email">

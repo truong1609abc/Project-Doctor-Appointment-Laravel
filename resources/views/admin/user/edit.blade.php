@@ -12,11 +12,19 @@
 <div class="container-fluid">
         <!-- Small boxes (Stat box) -->
         <div class="row">
+<<<<<<< HEAD
           <div class="col-lg-9 col-12">
                 <!-- general form elements -->
             <div class="card card-primary">
               <div class="card-header">
                 <h3 class="card-title">cap nhat doctor</h3>
+=======
+          <div class="col-lg-12 col-12">
+                <!-- general form elements -->
+            <div class="card card-primary">
+              <div class="card-header">
+                <h3 class="card-title">Cập nhật doctor</h3>
+>>>>>>> 83e0c695002e1949d6ffc75ec94c0467db85e1fc
               </div>
               <!-- /.card-header -->
               <!-- form start -->
@@ -48,9 +56,15 @@
 
                   <div class="input-group mb-3">
                     <label class="input-group-text" id="basic-addon3">Ảnh</label>
+<<<<<<< HEAD
                     <img style="width: 200px;cursor:zoom-in;" src="{{$doctor->image}}" >
                     <input name="image" type="file" accept="image/*" class="form-control" placeholder="Ho ten" aria-describedby="basic-addon3">
                     <!-- <input type="text" name="hidden_image" value="{{$doctor->image}}"> -->
+=======
+                    <img style="width: 200px;cursor:zoom-in;" src="../{{$doctor->image}}" >
+                    <input name="image" type="file" accept="image/*" class="form-control" placeholder="Ho ten" aria-describedby="basic-addon3">
+                    {{-- <!-- <input type="text" name="hidden_image" value="{{$doctor->image}}"> --> --}}
+>>>>>>> 83e0c695002e1949d6ffc75ec94c0467db85e1fc
                   
                   </div>
 
@@ -134,4 +148,8 @@
         <!-- /.row -->
       </div><!-- /.container-fluid -->
 
+<<<<<<< HEAD
 @endsection
+=======
+@endsection
+>>>>>>> 83e0c695002e1949d6ffc75ec94c0467db85e1fc

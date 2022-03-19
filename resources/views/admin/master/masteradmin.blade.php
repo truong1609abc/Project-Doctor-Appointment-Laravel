@@ -17,7 +17,8 @@
   <!-- iCheck -->
   <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
   <!-- JQVMap -->
-  <link rel="stylesheet" href="plugins/jqvmap/jqvmap.min.css">
+  <link rel="stylesheet" href="plugins/jqvmap/jqvmap.min.css"> 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="dist/css/adminlte.min.css">
   <!-- overlayScrollbars -->
@@ -46,10 +47,10 @@
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="index3.html" class="nav-link">Home</a>
+        <a href="user/list" class="nav-link">Home</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link">Contact</a>
+        <a href="feedback/list" class="nav-link">Contact</a>
       </li>
     </ul>
 
@@ -65,7 +66,11 @@
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="index3.html" class="brand-link">
+<<<<<<< HEAD
       <img  src="dist/img/Logo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+=======
+      <img  src="dist/img/TM.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+>>>>>>> 83e0c695002e1949d6ffc75ec94c0467db85e1fc
       <span class="brand-text font-weight-light">TM Healthy</span>
     </a>
 
@@ -136,25 +141,11 @@
                 </ul>
             </li>
 
+<<<<<<< HEAD
             <li class="nav-item">
-            <a href="#" class="nav-link ">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
-              <p>
-                Thống kê
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="./index.html" class="nav-link ">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Dashboard v1</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-
+=======
           <li class="nav-item">
+>>>>>>> 83e0c695002e1949d6ffc75ec94c0467db85e1fc
             <a href="#" class="nav-link ">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
@@ -164,6 +155,46 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
+                <a href="cuochen/list" class="nav-link ">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Quản lí cuộc hẹn</p>
+                </a>
+              </li>
+            </ul>
+          </li>                         
+          <li class="nav-item">
+            <a href="#" class="nav-link ">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+                Phản hồi
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="feedback/list" class="nav-link ">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Quản lí phản hồi</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a href="#" class="nav-link ">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+<<<<<<< HEAD
+                Cuộc hẹn
+=======
+                Thống kê
+>>>>>>> 83e0c695002e1949d6ffc75ec94c0467db85e1fc
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+<<<<<<< HEAD
                 <a href="cuochen/list" class="nav-link ">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Quản lí cuộc hẹn</p>
@@ -184,6 +215,11 @@
                 <a href="feedback/list" class="nav-link ">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Quản lí phản hồi</p>
+=======
+                <a href="thongke/list" class="nav-link ">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Quản lí thống kê</p>
+>>>>>>> 83e0c695002e1949d6ffc75ec94c0467db85e1fc
                 </a>
               </li>
             </ul>
